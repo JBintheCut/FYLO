@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url(bg-desktop.png) no-repeat;
+    background-position: bottom right;
+    background-size: 100%;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 120px;
+}
+
+.fylo {
+    height: 200px;
+    width: 425px;
+    background-color: hsl(228, 56%, 26%);
+    padding: 40px;
+    border-radius: 10px 100px 10px 10px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.icon-box {
+    height: 50px;
+    width: 50px;
+    background-color: hsl(229, 57%, 11%);
+    display: grid;
+    place-items: center;
+    margin-top: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.storage {
+    height: 150px;
+    width: 800px;
+    background-color: hsl(228, 56%, 26%);
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.storage-usage {
+    color: white;
+    font-weight: 400;
+}
+
+.usage {
+    color: white;
+    font-weight: 700;
+}
+
+.slider-container {
+    background-color: hsl(229, 57%, 11%);
+    height: 20px;
+    width: 95%;
+    border-radius: 50px;
+}
+
+.slider-amount {
+    background: linear-gradient(to right,  hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 20px;
+    width: 75%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 2px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;    
+}
+
+.storage-amount {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gb {
+    color: white;
+    font-weight: 700;
+}
+
+.notification {
+    position: absolute;
+    height: 70px;
+    width: 160px;
+    background-color: white;
+    z-index: 2;
+    border-radius: 10px;
+    top: 35%;
+    left: 66.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 17px;
+    z-index: 3;
+    top: 79.5%;
+    left: 85.5%;
+    transform: rotate(90deg)  skew(-45deg);
+}
+
+h1 {
+    font-size: 40px;
+    color: hsl(229, 57%, 11%);
+    margin-bottom: 25%;
+}
+
+.remaining-gb {
+    color: hsl(229, 7%, 55%);
+}
+
+@media screen and(max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        background: url(bg-mobile.png) no-repeat;
+        background-size: 100%;
+        background-color: hsl(229, 57%, 11%);
+    }
+
+    .container {
+        max-height: 90%;
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+}
